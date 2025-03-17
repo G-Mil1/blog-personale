@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miei Viaggi</title>
+    <style>
+        /* Stile generale della pagina */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Barra di navigazione superiore */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Stile sezioni parallasse */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 500px;
+            position: relative;
+        }
+
+        /* Immagini di sfondo per ogni sezione */
+        .parallax-1 {
+            background-image: url("immagini/viaggi/italia.jpg");
+        }
+
+        .parallax-2 {
+            background-image: url("immagini/viaggi/grecia.jpg");
+        }
+
+        .parallax-3 {
+            background-image: url("immagini/viaggi/budapest.jpg");
+        }
+
+        .parallax-4 {
+            background-image: url("immagini/viaggi/zurigo.jpg");
+        }
+
+        /* Contenuto delle sezioni */
+        .content {
+            background-color: beige;
+            padding: 50px 80px;
+            text-align: center;
+        }
+
+        /* Titoli sovrapposti alle immagini */
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+        /* Stile testo */
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .caption span.border {
+                font-size: 18px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="hobby.html">I miei hobby</a>
+        <a class="active" href="viaggi.html">I miei viaggi</a>
+        <a href="amici.html">I miei amici</a>
+    </div>
+
+    <!-- Prima sezione parallasse -->
+    <div class="parallax parallax-1">
+        <div class="caption">
+            <span class="border">I MIEI VIAGGI</span>
+        </div>
+    </div>
+
+    <!-- Contenuto prima sezione -->
+    <div class="content">
+        <h3>ITALIA</h3>
+        <p> Italia
+            Ho girato parecchio l’Italia nel corso degli anni, scoprendo città e regioni sempre diverse.<br>
+            <strong>Roma</strong> con la sua storia infinita, <strong>Milano</strong> super moderna, <strong>Firenze</strong> piena d’arte, e poi il mare spettacolare della <strong>Liguria</strong>, della <strong>Sicilia</strong> e della <strong>Puglia</strong>.<br>
+            La <strong>Calabria</strong> mi ha colpito per la sua natura selvaggia, mentre la <strong>Campania</strong> è casa mia, quindi l’ho esplorata in lungo e in largo, dai vicoli di Napoli alla Costiera Amalfitana.<br>
+            Ultima tappa, quest’anno: <strong>Bologna</strong>, con i suoi portici infiniti e il cibo.</p>
+    </div>
+
+    <!-- Seconda sezione parallasse -->
+    <div class="parallax parallax-2">
+        <div class="caption">
+            <span class="border">GRECIA</span>
+        </div>
+    </div>
+
+    <!-- Contenuto seconda sezione -->
+    <div class="content">
+        <h3>2017</h3>
+        <p><strong>Grecia</strong><br>
+            Tappa veloce durante una crociera, ma quanto basta per restare a bocca aperta.<br>
+            Mare assurdo, case bianche ovunque e quell’atmosfera che sembra uscita da un film mitologico.<br>
+            È stata solo una toccata e fuga, ma mi è rimasta la voglia di tornarci con più calma.</p>
+    </div>
+
+    <!-- Terza sezione parallasse -->
+    <div class="parallax parallax-3">
+        <div class="caption">
+            <span class="border">BUDAPEST</span>
+        </div>
+    </div>
+
+    <!-- Contenuto terza sezione -->
+    <div class="content">
+        <h3>2017</h3>
+        <p><strong>Budapest</strong><br>
+            Anche qui, ci sono stato in crociera e mi ha colpito subito.<br>
+            Il Parlamento illuminato di notte è spettacolare, i ponti sul Danubio danno un’aria quasi fiabesca e le terme sono un’esperienza assurda.<br>
+            È una città elegante ma con un’anima molto viva.</p>
+    </div>
+
+    <!-- Quarta sezione parallasse -->
+    <div class="parallax parallax-4">
+        <div class="caption">
+            <span class="border">ZURIGO</span>
+        </div>
+    </div>
+
+    <!-- Contenuto quarta sezione -->
+    <div class="content">
+        <h3>2023</h3>
+        <p><strong>Zurigo</strong><br>
+            Sono rimasto a Zurigo più di una settimana e l’ho vissuta un po’ di più rispetto ad altri viaggi.<br>
+            Città super pulita, tutto perfettamente organizzato, ma allo stesso tempo rilassante, soprattutto sul lago.<br>
+            Il centro storico è piccolo ma carino, e il cibo (soprattutto la cioccolata) è squisito.<br></p>
+    </div>
+</body>
+</html>

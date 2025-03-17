@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Il Mio Profilo</title>
+
+        <style>
+            /* Stile generale della pagina */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: beige;
+                margin: 0;
+            }
+
+            /* Barra di navigazione superiore */
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            /* Stile del titolo principale */
+            h1 {
+                text-align: center;
+            }
+
+            /* Layout della sezione profilo */
+            #profilo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin: 20px;
+            }
+            
+            /* Container per foto e informazioni */
+            .info-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            /* Stile della foto profilo */
+            .foto img {
+                width: 200px;
+                border-radius: 50%;
+            }
+            
+            /* Spaziatura testo informazioni */
+            .info h2, .info p {
+                margin: 10px;
+            }
+            
+            /* Sezione registrazione */
+            .signup-section {
+                margin: 20px;
+                text-align: left;
+                padding-right: 50px;
+                padding-top: 20px;            
+            }
+
+            .signup-button {
+                width: auto;
+                padding: 10px 20px;
+            }
+
+            /* Stile della finestra modale */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Contenuto della finestra modale */
+            .modal-content {
+                background-color: white;
+                padding: 30px;
+                border-radius: 15px;
+                width: 40%;
+                max-width: 400px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+            /* Animazione di apertura modale */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Pulsante di chiusura modale */
+            .close {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                font-size: 30px;
+                color: #555;
+                cursor: pointer;
+            }
+
+            .close:hover {
+                color: red;
+            }
+
+            /* Stile elementi del form */
+            input[type=text], input[type=email], select {
+                width: 90%;
+                padding: 10px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background: #f9f9f9;
+                font-size: 16px;
+            }
+
+            input:focus {
+                background-color: #f1f1f1;
+                outline: none;
+                border-color: #04AA6D;
+            }
+
+            /* Stile dei pulsanti */
+            button {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                font-size: 16px;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                background-color: #037f56;
+            }
+
+            .cancelbtn {
+                background-color: #f44336;
+            }
+
+            .cancelbtn:hover {
+                background-color: #d32f2f;
+            }
+
+            /* Responsive design */
+            @media screen and (max-width: 600px) {
+                .modal-content {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Barra di navigazione -->
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="hobby.html">I miei hobby</a>
+            <a href="viaggi.html">I miei viaggi</a>
+            <a href="amici.html">I miei amici</a>
+        </div>
+
+        <!-- Intestazione pagina -->
+        <header>
+            <h1>Il Mio Profilo</h1>
+        </header>
+
+        <!-- Sezione profilo personale -->
+        <section id="profilo">
+            <div class="info-container">
+                <div class="foto">
+                    <img src="immagini\home\me.jpg" alt="Foto Profilo">
+                </div>
+                <div class="info">
+                    <h2>Gabriele Milone</h2>
+                    <p><strong>Chi sono:</strong></p> 
+                    <p>Mi chiamo Gabriele Milone, ho 20 anni e studio Informatica all'Università degli Studi di Salerno (UNISA).<br>
+                       Sono appassionato di programmazione, videogiochi e robotica, con una naturale curiosità verso tutto ciò che riguarda la tecnologia.<br>
+                       Nel tempo libero mi dedico al gaming, alla palestra e alla scoperta di nuove conoscenze. Mi considero una persona curiosa, determinata e, a volte, un po' goffa.<br>
+                       Il mio obiettivo principale è crescere personalmente</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sezione registrazione amici -->
+        <div class="signup-section">
+            <p>Vuoi aggiungerti alla lista dei miei amici?</p>
+            <button onclick="openModal()" class="signup-button">Registrati come amico</button>
+        </div>
+
+        <!-- Finestra modale per la registrazione -->
+        <div id="id01" class="modal">
+            <span onclick="closeModal()" class="close" title="Chiudi">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <h1>Registrazione</h1>
+                
+                <!-- Form di registrazione -->
+                <label for="nome"><b>Nome</b></label>
+                <input type="text" placeholder="Inserisci il tuo nome" name="nome" required>
+
+                <label for="cognome"><b>Cognome</b></label>
+                <input type="text" placeholder="Inserisci il tuo cognome" name="cognome" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Inserisci la tua email" name="email" required>
+
+                <label for="telefono"><b>Telefono</b></label>
+                <input type="text" placeholder="Inserisci il tuo numero di telefono" name="telefono" required>
+
+                <label for="viaggi"><b>Lista dei viaggi preferiti</b></label>
+                <select name="viaggi" required>
+                    <option value="">Seleziona un viaggio</option>
+                    <option value="Giappone">Giappone</option>
+                    <option value="USA">USA</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Australia">Australia</option>
+                </select>
+
+                <!-- Pulsanti form -->
+                <button type="submit">Registrati</button>
+                <button type="button" onclick="closeModal()" class="cancelbtn">Annulla</button>
+            </form>
+
+            <!-- Script per la gestione della finestra modale -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Inizializzazione variabili
+                    const modal = document.getElementById("id01");
+                    modal.style.display = "none";
+            
+                    // Funzione per aprire la finestra modale
+                    function openModal() {
+                        modal.style.display = "flex";
+                    }
+            
+                    // Funzione per chiudere la finestra modale
+                    function closeModal() {
+                        modal.style.display = "none";
+                    }
+            
+                    // Event listeners
+                    document.querySelector("button[onclick='openModal()']").addEventListener("click", openModal);
+                    document.querySelector(".close").addEventListener("click", closeModal);
+            
+                    // Chiusura modale cliccando fuori
+                    window.addEventListener("click", function (event) {
+                        if (event.target === modal) {
+                            closeModal();
+                        }
+                    });
+            
+                    // Esposizione funzioni al window
+                    window.openModal = openModal;
+                    window.closeModal = closeModal;
+                });
+            </script>
+        </div>
+    </body>
+</html>

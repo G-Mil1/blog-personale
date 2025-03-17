@@ -1,5 +1,5 @@
 # blog-personale
-
+***LINK:*** https://g-mil1.github.io/blog-personale/
 Gli elementi utilizzati nelle varie pagine web del sito sono stati presi da diverse fonti. Di seguito sono elencate le fonti principali:
 
 idex.html:
